@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Sindhu ❤️</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+      color: #333;
+      text-align: center;
+      padding: 50px;
+      animation: backgroundFade 10s infinite alternate;
+      position: relative;
+      padding-bottom: 20px;
+    }
+    @keyframes backgroundFade {
+      0% {
+        background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+      }
+      50% {
+        background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      }
+      100% {
+        background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+      }
+    }
+    .floating-emoji {
+      position: absolute;
+      font-size: 24px;
+      animation: floatUp 6s linear infinite;
+      opacity: 0.8;
+    }
+    @keyframes floatUp {
+      0% {
+        transform: translateY(100vh);
+      }
+      100% {
+        transform: translateY(-10vh);
+      }
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      border-radius: 12px;
+      animation: bounceIn 1.5s;
+    }
+    @keyframes bounceIn {
+      0% {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      60% {
+        transform: scale(1.1);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    h1 {
+      color: #e91e63;
+      font-size: 2.5rem;
+      animation: glow 2s infinite alternate;
+    }
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #e91e63, 0 0 20px #e91e63, 0 0 30px #ff4081, 0 0 40px #ff4081;
+      }
+      to {
+        text-shadow: 0 0 20px #ff4081, 0 0 30px #e91e63, 0 0 40px #e91e63, 0 0 50px #e91e63;
+      }
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #e91e63;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+      animation: pulse 1.5s infinite;
+    }
+    @media screen and (max-width: 600px) {
+      button {
+        margin-top:10px;
+      }
+      body {
+        padding:50px 5px 50px 5px;
+      }
+        
+    }
+    button:hover {
+      background-color: #d81b60;
+      transform: scale(1.1);
+    }
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 10px #e91e63;
+      }
+      50% {
+        box-shadow: 0 0 20px #e91e63, 0 0 30px #ff4081;
+      }
+      100% {
+        box-shadow: 0 0 10px #e91e63;
+      }
+    }
+    .message {
+      margin-top: 20px;
+      font-size: 18px;
+      display: none;
+      animation: fadeIn 1s forwards;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    .password-container {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="floating-emoji" style="left: 10%; animation-duration: 6s;">❤️</div>
+  <div class="floating-emoji" style="left: 30%; animation-duration: 7s;">💖</div>
+  <div class="floating-emoji" style="left: 50%; animation-duration: 5s;">💕</div>
+  <div class="floating-emoji" style="left: 70%; animation-duration: 6.5s;">🌹</div>
+  <div class="floating-emoji" style="left: 90%; animation-duration: 8s;">💘</div>
+
+  <div class="container">
+    <h1>Hi Sindhu! ❤️</h1>
+    <p>I have a surprise for you!</p>
+    <div class="password-container">
+      <input type="password" id="password" placeholder="Enter the secret password" style="padding: 10px; border-radius: 8px; border: 1px solid #ccc;">
+      <button onclick="checkPassword()">Submit</button>
+    </div>
+    <div id="message" class="message">
+      <p>Dear Sindhu,</p>
+      <p>Once upon a time, in the universe of our hearts, two stars collided—Madhu and Sindhu. That cosmic spark gave birth to a love so deep, it became our universe. 🌟</p>
+      <p>From every sunrise to every moonlit night, my thoughts are filled with you. Your laughter is the symphony that plays in my soul, and your love is the compass that guides me through life's journeys.</p>
+      <p>Every moment we share is a new chapter in our love story—one written in the stars and sealed with destiny.</p>
+      <p>I love you more than words could ever express, and I'll cherish you, Sindhu, forever and always. ❤️</p>
+      <p>Forever yours,</p>
+      <p><strong>Madhu</strong></p>
+    </div>
+  </div>
+
+  <script>
+    function checkPassword() {
+      const password = document.getElementById('password').value;
+      const correctPassword = 'madhuloveSindhu'; // Set your secret password here
+
+      if (password === correctPassword) {
+        document.getElementById('message').style.display = 'block';
+      } else {
+        alert('Incorrect password. Please try again.');
+      }
+    }
+  </script>
+</body>
+</html>
